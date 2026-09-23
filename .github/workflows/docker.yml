@@ -25,3 +25,6 @@ jobs:
 
       - name: envoyer l'image
         run: docker push patrice1607/go-api-rattrapage:latest
+
+      - name: Deployer sur Render
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
